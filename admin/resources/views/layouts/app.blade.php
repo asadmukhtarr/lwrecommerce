@@ -202,13 +202,13 @@
   </a>
   <ul class="nav nav-treeview">
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a href="{{ route('new.order') }}" class="nav-link">
         <i class="nav-icon bi bi-file-earmark-text"></i>
         <p>New Orders</p>
       </a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a href="{{ route('history.order') }}" class="nav-link">
         <i class="nav-icon bi bi-clock"></i>
         <p>Order History</p>
       </a>
@@ -218,7 +218,7 @@
 
 <!-- Customers Link -->
 <li class="nav-item">
-  <a href="#" class="nav-link">
+  <a href="{{ route('customers') }}" class="nav-link">
     <i class="nav-icon bi bi-people-fill"></i>
     <p>Customers</p>
   </a>

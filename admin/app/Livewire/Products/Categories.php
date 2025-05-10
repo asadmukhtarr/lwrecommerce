@@ -4,7 +4,7 @@ namespace App\Livewire\Products;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\catgeory As category;
+use App\Models\category;
 
 class Categories extends Component
 {

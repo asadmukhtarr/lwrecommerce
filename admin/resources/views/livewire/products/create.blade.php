@@ -32,6 +32,16 @@
                         <div class="text-danger mt-1">{{ $message }}</div>
                     @enderror
                 </div>
+                 <!-- price -->
+                 <div class="form-group mb-3">
+                    <label for="quantity">
+                        <i class="nav-icon bi bi-123"></i> price
+                    </label>
+                    <input type="number" id="price" class="form-control" wire:model.defer="price">
+                    @error('price')
+                        <div class="text-danger mt-1">{{ $message }}</div>
+                    @enderror
+                </div>
 
                 <!-- Description -->
                 <div class="form-group mb-3">
@@ -51,7 +61,9 @@
                     </label>
                     <select wire:model="category" class="form-control">
                         <option value="">Select Category</option>
-                     
+                        @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->title }}</option>
+                        @endforeach
                     </select>
                     @error('category')
                         <div class="text-danger mt-1">{{ $message }}</div>
@@ -77,7 +89,7 @@
                 <!-- Submit Button -->
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-save"></i> Save Product
+                        <i class="fa fa-save"></i> Save Product <i class="fa fa-spin fa-spinner" wire:loading></i>
                     </button>
                 </div>
 

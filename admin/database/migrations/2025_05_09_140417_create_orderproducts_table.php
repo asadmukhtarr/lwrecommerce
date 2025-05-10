@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('catgeories', function (Blueprint $table) {
+        Schema::create('orderproducts', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
-            $table->string('thumbnail')->nullable();
+            $table->integer('order_id')->nullable();
+            $table->integer('product_id')->nullable();
+            $table->integer('quantity')->nullable();
+            $table->string('price_per_product')->nullable();
+            $table->string('total_orice')->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('catgeories');
+        Schema::dropIfExists('orderproducts');
     }
 };

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class catgeory extends Model
+class customer extends Model
 {
     //
 }
